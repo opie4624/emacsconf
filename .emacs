@@ -14,7 +14,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/OrgMode/" "~/Dropbox/OrgMode/Personal/" "~/Dropbox/OrgMode/Work/")))
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes
+   (quote
+    ("ebe862b54fe8d3c9189a0d7c218565a669abab09e3b504b68797a2f254fc3b0d" default)))
+ '(diary-file "~/Dropbox/diary")
+ '(org-agenda-files
+   (quote
+    ("~/Dropbox/OrgMode/" "~/Dropbox/OrgMode/Personal/" "~/Dropbox/OrgMode/Work/")))
  '(org-clock-into-drawer "LOGBOOK")
  '(org-clock-persist t)
  '(org-clock-persist-query-save t)
@@ -26,12 +33,12 @@
  '(org-log-into-drawer t)
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-mobile-inbox-for-pull "~/Dropbox/OrgMode/from-mobile.org")
- '(org-modules (quote (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-jira)))
+ '(org-modules
+   (quote
+    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-jira)))
  '(org-refile-allow-creating-parent-nodes t)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
- '(org-refile-use-outline-path t)
- '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes (quote ("ebe862b54fe8d3c9189a0d7c218565a669abab09e3b504b68797a2f254fc3b0d" default))))
+ '(org-refile-use-outline-path t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
