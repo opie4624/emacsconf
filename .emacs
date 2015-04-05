@@ -43,8 +43,8 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 
-(add-to-list 'load-path' "~/.emacs.d")
-(load-library "puppet-syntax-emacs/puppet-mode-init.el")
+;(add-to-list 'load-path' "~/.emacs.d")
+
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
@@ -56,11 +56,8 @@
 ;(setq ns-function-modifier 'hyper) ; set Mac's Fn key to type Hyper
 (setq ns-function-modifier 'super) ; set Mac's Fn key to type Super
 
-(setq load-path (cons  "/usr/local/lib/erlang/lib/tools-2.7.1/emacs"
-      load-path))
-(setq erlang-root-dir "/usr/local/lib/erlang")
-(setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
-(require 'erlang-start)
-
-(add-to-list 'load-path' "~/.emacs.d/sx.el")
-(require 'sx-load)
+;(setq load-path (cons  "/usr/local/lib/erlang/lib/tools-2.7.1/emacs"
+;      load-path))
+;(setq erlang-root-dir "/usr/local/lib/erlang")
+;(setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
+;(require 'erlang-start)
