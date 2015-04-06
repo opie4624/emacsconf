@@ -29,16 +29,19 @@
  '(org-default-notes-file "~/Dropbox/OrgMode/Inbox.org")
  '(org-directory "~/Dropbox/OrgMode")
  '(org-enforce-todo-checkbox-dependencies t)
+ '(org-export-backends (quote (ascii html icalendar latex md confluence deck)))
+ '(org-extend-today-until 2)
  '(org-log-done (quote time))
  '(org-log-into-drawer t)
  '(org-mobile-directory "~/Dropbox/MobileOrg")
  '(org-mobile-inbox-for-pull "~/Dropbox/OrgMode/from-mobile.org")
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-jira)))
+    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-drill org-expiry org-jira org-learn org-secretary org-toc org-track)))
  '(org-refile-allow-creating-parent-nodes t)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
- '(org-refile-use-outline-path t))
+ '(org-refile-use-outline-path t)
+ '(org-use-speed-commands t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
