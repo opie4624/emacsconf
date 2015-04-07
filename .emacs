@@ -26,6 +26,7 @@
  '(org-clock-persist t)
  '(org-clock-persist-query-save t)
  '(org-completion-use-ido t)
+ '(org-crypt-key "E9053BDA")
  '(org-default-notes-file "~/Dropbox/OrgMode/Inbox.org")
  '(org-directory "~/Dropbox/OrgMode")
  '(org-enforce-todo-checkbox-dependencies t)
