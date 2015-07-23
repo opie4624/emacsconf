@@ -67,8 +67,11 @@
 ;(setq ns-function-modifier 'hyper) ; set Mac's Fn key to type Hyper
 (setq ns-function-modifier 'super) ; set Mac's Fn key to type Super
 
-;(setq load-path (cons  "/usr/local/lib/erlang/lib/tools-2.7.1/emacs"
-;      load-path))
-;(setq erlang-root-dir "/usr/local/lib/erlang")
-;(setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
-;(require 'erlang-start)
+(setq load-path (cons  "/usr/local/lib/erlang/lib/tools-2.7.2/emacs"
+      load-path))
+(setq erlang-root-dir "/usr/local/lib/erlang")
+(setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
+(require 'erlang-start)
+
+(add-to-list 'load-path "~/.emacs.d/simple-rtm/lisp")
+(autoload 'simple-rtm-mode "simple-rtm" "Interactive Mode for Remember The Milk" t)
