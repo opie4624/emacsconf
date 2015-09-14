@@ -67,7 +67,9 @@
 ;(setq ns-function-modifier 'hyper) ; set Mac's Fn key to type Hyper
 (setq ns-function-modifier 'super) ; set Mac's Fn key to type Super
 
-(setq load-path (cons  "/usr/local/lib/erlang/lib/tools-2.7.2/emacs"
+
+; TODO Make this path load from an included file. ie: one for mac, one for linux
+(setq load-path (cons  "/usr/local/lib/erlang/lib/tools-2.8/emacs"
       load-path))
 (setq erlang-root-dir "/usr/local/lib/erlang")
 (setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
@@ -75,3 +77,11 @@
 
 (add-to-list 'load-path "~/.emacs.d/simple-rtm/lisp")
 (autoload 'simple-rtm-mode "simple-rtm" "Interactive Mode for Remember The Milk" t)
+
+; TODO Make this path load from an included file. ie: one for mac, one for linux
+(add-to-list 'load-path "/usr/local/share/git-core/contrib/emacs")
+(require 'git)
+(require 'git-blame)
+
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
