@@ -7,7 +7,11 @@
 (setq package-load-list '(all))     ;; List of packages to load
 (unless (package-installed-p 'org)  ;; Make sure the Org package is
   (package-install 'org))           ;; installed, install it if not
-(package-initialize)                ;; Initialize & Install Package
+(unless (package-installed-p 'beacon)  ;; Make sure the Beacon package is
+  (package-install 'beacon))           ;; installed, install it if not
+(unless (package-installed-p 'smart-mode-line-powerline-theme)
+  (package-install 'smart-mode-line-powerline-theme))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -17,7 +21,7 @@
  '(custom-enabled-themes (quote (zenburn)))
  '(custom-safe-themes
    (quote
-    ("ebe862b54fe8d3c9189a0d7c218565a669abab09e3b504b68797a2f254fc3b0d" default)))
+    ("26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "ebe862b54fe8d3c9189a0d7c218565a669abab09e3b504b68797a2f254fc3b0d" default)))
  '(diary-file "~/Dropbox/diary")
  '(org-agenda-files
    (quote
@@ -38,7 +42,7 @@
  '(org-mobile-inbox-for-pull "~/Dropbox/OrgMode/from-mobile.org")
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-drill org-expiry org-jira org-learn org-secretary org-toc org-track)))
+    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-drill org-expiry org-learn org-secretary org-toc org-track)))
  '(org-refile-allow-creating-parent-nodes t)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
  '(org-refile-use-outline-path t)
@@ -73,3 +77,8 @@
 
 (dolist (file (directory-files "~/.emacs.d/system" t "\.el$" nil))
   (load (file-name-sans-extension file)))
+
+(beacon-mode 1)
+
+(setq sml/theme 'powerline)
+(sml/setup)

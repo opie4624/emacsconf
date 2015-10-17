@@ -1,0 +1,10 @@
+*
+!/.emacs
+!/.emacs.d
+!/.emacs.d/auto-mobile-pull.el
+!/.emacs.d/auto-mobile-push.el
+!/.emacs.d/bookmarks
+!/.emacs.d/.rtm-auth-token
+!/.emacs.d/simple-rtm
+!/.emacs.d/system/.keep
+!/.emacs.d/zenburn-theme.el
