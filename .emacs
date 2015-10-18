@@ -1,18 +1,3 @@
-(require 'package)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(package-initialize)                ;; Initialize & Install Package
-(unless package-archive-contents    ;; Refresh the packages descriptions
-  (package-refresh-contents))
-(setq package-load-list '(all))     ;; List of packages to load
-(unless (package-installed-p 'org)  ;; Make sure the Org package is
-  (package-install 'org))           ;; installed, install it if not
-(unless (package-installed-p 'beacon)  ;; Make sure the Beacon package is
-  (package-install 'beacon))           ;; installed, install it if not
-(unless (package-installed-p 'smart-mode-line-powerline-theme)
-  (package-install 'smart-mode-line-powerline-theme))
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -23,6 +8,8 @@
    (quote
     ("26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "ebe862b54fe8d3c9189a0d7c218565a669abab09e3b504b68797a2f254fc3b0d" default)))
  '(diary-file "~/Dropbox/diary")
+ '(ido-enable-flex-matching t)
+ '(ido-everywhere t)
  '(org-agenda-files
    (quote
     ("~/Dropbox/OrgMode/" "~/Dropbox/OrgMode/Personal/" "~/Dropbox/OrgMode/Work/")))
@@ -46,7 +33,13 @@
  '(org-refile-allow-creating-parent-nodes t)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
  '(org-refile-use-outline-path t)
- '(org-use-speed-commands t))
+ '(org-use-speed-commands t)
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "http://melpa.org/packages/")
+     ("org" . "http://orgmode.org/elpa/"))))
+ '(sml/theme (quote powerline)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -54,12 +47,18 @@
  ;; If there is more than one, they won't work right.
  )
 
-(ido-mode 1)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
+(defun package-check-and-install (&rest pkgs)
+  "Utility function to install packages if not already installed"
+  (require 'package)
+  (package-initialize)
+  (unless package-archive-contents
+    (package-refresh-contents))
+  (dolist (pkg pkgs)
+    (unless (package-installed-p pkg)
+      (package-install pkg))))
 
-;(add-to-list 'load-path' "~/.emacs.d")
-
+(package-check-and-install
+ 'org-plus-contrib 'alchemist 'elixir-mode 'minimap 'beacon 'smart-mode-line-powerline-theme)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
@@ -78,7 +77,7 @@
 (dolist (file (directory-files "~/.emacs.d/system" t "\.el$" nil))
   (load (file-name-sans-extension file)))
 
-(beacon-mode 1)
-
-(setq sml/theme 'powerline)
-(sml/setup)
+(add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'after-init-hook 'beacon-mode 1)
+(add-hook 'after-init-hook 'ido-mode 1)
+(add-hook 'after-init-hook 'sml/setup)
