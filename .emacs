@@ -13,6 +13,7 @@
  '(org-agenda-files
    (quote
     ("~/Dropbox/OrgMode/" "~/Dropbox/OrgMode/Personal/" "~/Dropbox/OrgMode/Work/")))
+ '(org-clock-idle-time 10)
  '(org-clock-into-drawer "LOGBOOK")
  '(org-clock-persist t)
  '(org-clock-persist-query-save t)
@@ -29,7 +30,7 @@
  '(org-mobile-inbox-for-pull "~/Dropbox/OrgMode/from-mobile.org")
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-drill org-expiry org-learn org-secretary org-toc org-track)))
+    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-expiry org-secretary org-toc org-track)))
  '(org-refile-allow-creating-parent-nodes t)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
  '(org-refile-use-outline-path t)
