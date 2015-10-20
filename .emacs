@@ -30,7 +30,7 @@
  '(org-mobile-inbox-for-pull "~/Dropbox/OrgMode/from-mobile.org")
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-expiry org-secretary org-toc org-track)))
+    (org-bbdb org-bibtex org-crypt org-docview org-gnus org-habit org-info org-irc org-mhe org-mouse org-rmail org-w3m org-expiry org-mac-link org-secretary org-toc org-track)))
  '(org-refile-allow-creating-parent-nodes t)
  '(org-refile-targets (quote ((org-agenda-files :maxlevel . 2))))
  '(org-refile-use-outline-path t)
@@ -82,3 +82,6 @@
 (add-hook 'after-init-hook 'beacon-mode 1)
 (add-hook 'after-init-hook 'ido-mode 1)
 (add-hook 'after-init-hook 'sml/setup)
+
+(add-hook 'org-mode-hook (lambda()
+			   (define-key org-mode-map (kbd "C-c g") 'org-mac-grab-link)))

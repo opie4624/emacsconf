@@ -8,10 +8,10 @@
  (rear-context-string . "l@freeshell.org\n")
  (position . 641))
 ("org-refile-last-stored"
- (filename . "~/Dropbox/OrgMode/Personal/Home.org")
- (front-context-string . "** TODO Finish T")
- (rear-context-string . "l@freeshell.org\n")
- (position . 641))
+ (filename . "~/Dropbox/OrgMode/Work/Pandora.org")
+ (front-context-string . "** Install Notes")
+ (rear-context-string . "41c1a\n   :END:\n\n")
+ (position . 649))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/OrgMode/Inbox.org")
  (front-context-string)
