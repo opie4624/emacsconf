@@ -7,12 +7,13 @@
  '(custom-safe-themes
    (quote
     ("26614652a4b3515b4bbbb9828d71e206cc249b67c9142c06239ed3418eff95e2" "ebe862b54fe8d3c9189a0d7c218565a669abab09e3b504b68797a2f254fc3b0d" default)))
- '(diary-file "~/Dropbox/diary")
+ '(diary-file "~/Dropbox/OrgMode/Diary.org")
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
  '(org-agenda-files
    (quote
     ("~/Dropbox/OrgMode/" "~/Dropbox/OrgMode/Personal/" "~/Dropbox/OrgMode/Work/")))
+ '(org-agenda-include-diary nil)
  '(org-clock-idle-time 10)
  '(org-clock-into-drawer "LOGBOOK")
  '(org-clock-persist t)
@@ -59,7 +60,10 @@
       (package-install pkg))))
 
 (package-check-and-install
- 'org-plus-contrib 'alchemist 'elixir-mode 'minimap 'beacon 'smart-mode-line-powerline-theme)
+ 'org-plus-contrib 'alchemist 'elixir-mode 'minimap 'beacon 'smart-mode-line-powerline-theme 'dash-at-point)
+
+;(dolist (key "\C-cD" "\C-cW" "\C-cd" "\C-cj" "\C-cw")
+;  global-unset-key key)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
@@ -85,3 +89,4 @@
 
 (add-hook 'org-mode-hook (lambda()
 			   (define-key org-mode-map (kbd "C-c g") 'org-mac-grab-link)))
+

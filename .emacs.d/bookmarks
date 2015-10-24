@@ -3,18 +3,18 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored-marker"
- (filename . "~/Dropbox/OrgMode/Personal/Home.org")
- (front-context-string . "** TODO Finish T")
- (rear-context-string . "l@freeshell.org\n")
- (position . 641))
+ (filename . "~/Dropbox/OrgMode/Work/Pandora.org")
+ (front-context-string . "*** TODO Setup K")
+ (rear-context-string . "6x86_64/P4V.dmg\n")
+ (position . 3071))
 ("org-refile-last-stored"
  (filename . "~/Dropbox/OrgMode/Work/Pandora.org")
- (front-context-string . "** Install Notes")
- (rear-context-string . "41c1a\n   :END:\n\n")
- (position . 649))
+ (front-context-string . "*** TODO Setup K")
+ (rear-context-string . "6x86_64/P4V.dmg\n")
+ (position . 3071))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/OrgMode/Inbox.org")
  (front-context-string)
- (rear-context-string . "7-29 Tue 13:53>\n")
- (position . 336))
+ (rear-context-string . "2015-10-21 Wed]\n")
+ (position . 776))
 )
