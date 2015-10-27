@@ -9,12 +9,12 @@
  (position . 3071))
 ("org-refile-last-stored"
  (filename . "~/Dropbox/OrgMode/Work/Pandora.org")
- (front-context-string . "*** TODO Setup K")
- (rear-context-string . "6x86_64/P4V.dmg\n")
- (position . 3071))
+ (front-context-string . "** Setup\n*** TOD")
+ (rear-context-string . "ing\n\n* Projects\n")
+ (position . 7717))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/OrgMode/Inbox.org")
- (front-context-string)
- (rear-context-string . "2015-10-21 Wed]\n")
- (position . 776))
+ (front-context-string . "** TODO Fix zshr")
+ (rear-context-string . "2015-10-26 Mon]\n")
+ (position . 1273))
 )
