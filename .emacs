@@ -90,3 +90,8 @@
 (add-hook 'org-mode-hook (lambda()
 			   (define-key org-mode-map (kbd "C-c g") 'org-mac-grab-link)))
 
+(defadvice ido-find-file (after find-file-sudo activate)
+  "Find file as root if necessary."
+  (unless (and buffer-file-name
+               (file-writable-p buffer-file-name))
+    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
