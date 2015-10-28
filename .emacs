@@ -10,6 +10,7 @@
  '(diary-file "~/Dropbox/OrgMode/Diary.org")
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
+ '(org-agenda-diary-file "~/Dropbox/OrgMode/Diary.org")
  '(org-agenda-files
    (quote
     ("~/Dropbox/OrgMode/" "~/Dropbox/OrgMode/Personal/" "~/Dropbox/OrgMode/Work/")))
