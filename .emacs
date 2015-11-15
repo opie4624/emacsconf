@@ -10,6 +10,7 @@
  '(diary-file "~/Dropbox/OrgMode/Diary.org")
  '(ido-enable-flex-matching t)
  '(ido-everywhere t)
+ '(indent-tabs-mode nil)
  '(org-agenda-diary-file "~/Dropbox/OrgMode/Diary.org")
  '(org-agenda-files
    (quote
